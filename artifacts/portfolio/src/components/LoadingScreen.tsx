@@ -76,7 +76,7 @@ export default function LoadingScreen({ onDone }: Props) {
                 className="text-7xl md:text-9xl font-black tracking-tighter"
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
-                  background: "linear-gradient(135deg, #7C3AED, #06B6D4)",
+                  background: "linear-gradient(135deg, #2563EB, #06B6D4)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -85,7 +85,7 @@ export default function LoadingScreen({ onDone }: Props) {
                   transition: glitch ? "none" : "filter 0.1s, transform 0.1s",
                 }}
               >
-                AC
+                ZT
               </div>
               {glitch && (
                 <>
@@ -99,19 +99,19 @@ export default function LoadingScreen({ onDone }: Props) {
                       clipPath: "inset(20% 0 60% 0)",
                     }}
                   >
-                    AC
+                    ZT
                   </div>
                   <div
                     className="absolute inset-0 text-7xl md:text-9xl font-black tracking-tighter"
                     style={{
                       fontFamily: "'Space Grotesk', sans-serif",
-                      color: "#7C3AED",
+                      color: "#2563EB",
                       opacity: 0.4,
                       transform: "translate(3px, 0)",
                       clipPath: "inset(60% 0 20% 0)",
                     }}
                   >
-                    AC
+                    ZT
                   </div>
                 </>
               )}
@@ -128,8 +128,8 @@ export default function LoadingScreen({ onDone }: Props) {
                   className="absolute left-0 top-0 h-full rounded-full"
                   style={{
                     width: `${pct}%`,
-                    background: "linear-gradient(90deg, #7C3AED, #06B6D4)",
-                    boxShadow: "0 0 12px rgba(124,58,237,0.8)",
+                    background: "linear-gradient(90deg, #2563EB, #06B6D4)",
+                    boxShadow: "0 0 12px rgba(37,99,235,0.8)",
                     transition: "width 0.08s linear",
                   }}
                 />
@@ -156,7 +156,7 @@ export default function LoadingScreen({ onDone }: Props) {
             className="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs font-mono tracking-widest uppercase"
             style={{ color: "#1a1a2a" }}
           >
-            alexchen.dev
+            ziadtaha.pages.dev
           </div>
         </motion.div>
       )}

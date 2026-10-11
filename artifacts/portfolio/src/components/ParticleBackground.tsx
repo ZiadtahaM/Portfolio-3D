@@ -16,7 +16,7 @@ function Particles() {
       positions[i * 3 + 2] = (Math.random() - 0.5) * 30;
       const t = Math.random();
       if (t < 0.5) {
-        colors[i * 3] = 0.49; colors[i * 3 + 1] = 0.23; colors[i * 3 + 2] = 0.93;
+        colors[i * 3] = 0.15; colors[i * 3 + 1] = 0.39; colors[i * 3 + 2] = 0.92;
       } else {
         colors[i * 3] = 0.02; colors[i * 3 + 1] = 0.71; colors[i * 3 + 2] = 0.83;
       }
@@ -52,7 +52,7 @@ function FloatingRing() {
   return (
     <mesh ref={ref} position={[8, 2, -5]}>
       <torusGeometry args={[2, 0.05, 16, 80]} />
-      <meshBasicMaterial color="#7C3AED" transparent opacity={0.3} />
+      <meshBasicMaterial color="#2563EB" transparent opacity={0.3} />
     </mesh>
   );
 }
@@ -96,7 +96,7 @@ function CSSParticleBackground() {
       vx: (Math.random() - 0.5) * 0.18,
       vy: (Math.random() - 0.5) * 0.18,
       r: Math.random() * 1.2 + 0.4,
-      color: Math.random() < 0.5 ? "rgba(124,58,237," : "rgba(6,182,212,",
+      color: Math.random() < 0.5 ? "rgba(37,99,235," : "rgba(6,182,212,",
       alpha: Math.random() * 0.5 + 0.2,
     }));
 

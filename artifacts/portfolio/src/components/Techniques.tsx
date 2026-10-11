@@ -17,7 +17,7 @@ function SpinningGeo({ geo }: { geo: "icosahedron" | "torus" | "box" }) {
       {geo === "icosahedron" && <icosahedronGeometry args={[1.1, 0]} />}
       {geo === "torus" && <torusGeometry args={[0.9, 0.35, 16, 40]} />}
       {geo === "box" && <boxGeometry args={[1.3, 1.3, 1.3]} />}
-      <meshStandardMaterial color="#7C3AED" metalness={0.9} roughness={0.1} emissive="#3b0764" emissiveIntensity={0.4} />
+      <meshStandardMaterial color="#2563EB" metalness={0.9} roughness={0.1} emissive="#1e3a8a" emissiveIntensity={0.3} />
     </mesh>
   );
 }
@@ -51,7 +51,7 @@ function ParticleCloud() {
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions.current, 3]} />
       </bufferGeometry>
-      <pointsMaterial size={0.06} color="#a78bfa" transparent opacity={0.8} sizeAttenuation />
+      <pointsMaterial size={0.06} color="#60A5FA" transparent opacity={0.8} sizeAttenuation />
     </points>
   );
 }
@@ -66,7 +66,7 @@ function WaveDemo() {
           style={{
             width: 4,
             borderRadius: 2,
-            background: `linear-gradient(180deg, #06B6D4, #7C3AED)`,
+            background: `linear-gradient(180deg, #06B6D4, #2563EB)`,
             animation: `wave-bar 1.4s ease-in-out ${i * 0.055}s infinite alternate`,
             height: `${20 + Math.sin(i * 0.4) * 15}px`,
           }}
@@ -85,7 +85,7 @@ function InstancedDemo() {
             key={i}
             style={{
               width: 8, height: 8,
-              background: i % 3 === 0 ? "#7C3AED" : i % 3 === 1 ? "#06B6D4" : "#a78bfa",
+              background: i % 3 === 0 ? "#2563EB" : i % 3 === 1 ? "#06B6D4" : "#60A5FA",
               borderRadius: 2,
               opacity: 0.4 + (i % 5) * 0.12,
               animation: `cube-pulse ${0.8 + (i % 7) * 0.2}s ease-in-out ${i * 0.04}s infinite alternate`,
@@ -104,15 +104,15 @@ function BloomDemo() {
       <div
         style={{
           width: 60, height: 60, borderRadius: "50%",
-          background: "radial-gradient(circle, #a855f7, #7C3AED 50%, transparent 80%)",
-          boxShadow: "0 0 20px 8px rgba(124,58,237,0.6), 0 0 60px 20px rgba(124,58,237,0.25), 0 0 100px 40px rgba(6,182,212,0.1)",
+          background: "radial-gradient(circle, #3b82f6, #2563EB 50%, transparent 80%)",
+          boxShadow: "0 0 20px 8px rgba(37,99,235,0.5), 0 0 50px 15px rgba(37,99,235,0.2), 0 0 80px 30px rgba(6,182,212,0.1)",
           animation: "orb-float 3s ease-in-out infinite",
         }}
       />
       <div
         style={{
           position: "absolute", inset: 0,
-          background: "radial-gradient(circle at 50% 60%, rgba(124,58,237,0.12), transparent 65%)",
+          background: "radial-gradient(circle at 50% 60%, rgba(37,99,235,0.12), transparent 65%)",
           filter: "blur(8px)",
         }}
       />
@@ -122,11 +122,11 @@ function BloomDemo() {
 
 function PhysicsDemo() {
   const balls = [
-    { size: 14, color: "#7C3AED", delay: 0, x: 30 },
+    { size: 14, color: "#2563EB", delay: 0, x: 30 },
     { size: 10, color: "#06B6D4", delay: 0.3, x: 55 },
-    { size: 18, color: "#a78bfa", delay: 0.6, x: 75 },
+    { size: 18, color: "#60A5FA", delay: 0.6, x: 75 },
     { size: 8, color: "#67e8f9", delay: 0.15, x: 20 },
-    { size: 12, color: "#7C3AED", delay: 0.45, x: 60 },
+    { size: 12, color: "#2563EB", delay: 0.45, x: 60 },
   ];
   return (
     <div className="relative w-full h-full overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.05)", borderRadius: 8 }}>
@@ -172,8 +172,8 @@ const techniques = [
     title: "ShaderMaterial",
     api: "THREE.ShaderMaterial",
     desc: "Custom vertex & fragment shaders running on the GPU. Infinite visual possibilities.",
-    color: "#7C3AED",
-    colorAlt: "#a78bfa",
+    color: "#2563EB",
+    colorAlt: "#60a5fa",
     grade: 5,
     cssFallback: <WaveDemo />,
     r3fScene: null as null | "particles",
@@ -192,8 +192,8 @@ const techniques = [
     title: "Particle System",
     api: "THREE.Points",
     desc: "BufferGeometry-backed point clouds with custom attributes and animated shaders.",
-    color: "#7C3AED",
-    colorAlt: "#a78bfa",
+    color: "#2563EB",
+    colorAlt: "#60a5fa",
     grade: 3,
     cssFallback: null,
     r3fScene: "particles" as const,
@@ -212,8 +212,8 @@ const techniques = [
     title: "Physics Sim",
     api: "Rapier + Three.js",
     desc: "WASM-powered rigid body physics with collision detection synced to render loop.",
-    color: "#7C3AED",
-    colorAlt: "#a78bfa",
+    color: "#2563EB",
+    colorAlt: "#60a5fa",
     grade: 4,
     cssFallback: <PhysicsDemo />,
     r3fScene: null,
@@ -311,14 +311,14 @@ export default function Techniques() {
           transition={{ duration: 0.7 }}
           className="mb-20"
         >
-          <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#7C3AED" }}>
+          <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#2563EB" }}>
             Three.js Capabilities
           </span>
           <h2 className="mt-3 font-bold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
             Under the <span className="gradient-text">Hood</span>
           </h2>
           <p className="mt-4 max-w-xl text-sm leading-relaxed" style={{ color: "#404052" }}>
-            Every project draws from this toolkit. Filled squares show technique complexity — five means cutting-edge.
+            Every project draws from this toolkit. Filled squares show technique complexity, five indicates highest tier.
           </p>
         </motion.div>
 

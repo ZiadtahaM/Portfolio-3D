@@ -4,26 +4,26 @@ import { motion, useInView } from "framer-motion";
 const services = [
   {
     num: "01",
-    title: "3D Web Experiences",
+    title: "Enterprise Angular & Full-Stack Systems",
     description:
-      "Immersive Three.js applications, custom GLSL shaders, and WebGL pipelines that turn browsers into cinematic spaces.",
-    tags: ["Three.js", "WebGL", "GLSL", "R3F"],
+      "Enterprise Angular architectures with RxJS state management, server-side rendering, and responsive multi-platform interfaces.",
+    tags: ["Angular 18", "RxJS", "TypeScript", "NestJS"],
     icon: (
       <svg viewBox="0 0 40 40" fill="none" style={{ width: 32, height: 32 }}>
-        <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" stroke="#7C3AED" strokeWidth="1.5" />
-        <path d="M20 4L20 36M4 13L36 27M36 13L4 27" stroke="#7C3AED" strokeWidth="0.75" strokeOpacity="0.4" />
+        <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" stroke="#2563EB" strokeWidth="1.5" />
+        <path d="M20 4L20 36M4 13L36 27M36 13L4 27" stroke="#2563EB" strokeWidth="0.75" strokeOpacity="0.4" />
       </svg>
     ),
-    accent: "#7C3AED",
-    accentAlt: "#a78bfa",
-    from: "From $8,000",
+    accent: "#2563EB",
+    accentAlt: "#60A5FA",
+    from: "From $1,500",
   },
   {
     num: "02",
-    title: "Creative Direction",
+    title: "High-Throughput APIs & Distributed Backends",
     description:
-      "Full visual strategy — motion language, design systems, and the aesthetic logic that makes a brand feel inevitable.",
-    tags: ["Motion", "Branding", "UI/UX", "Figma"],
+      "Modular NestJS and Node.js server architectures, PostgreSQL query optimization, Redis cache layers, and Docker containerization.",
+    tags: ["Node.js", "NestJS", "PostgreSQL", "Redis"],
     icon: (
       <svg viewBox="0 0 40 40" fill="none" style={{ width: 32, height: 32 }}>
         <circle cx="20" cy="20" r="14" stroke="#06B6D4" strokeWidth="1.5" />
@@ -34,47 +34,47 @@ const services = [
       </svg>
     ),
     accent: "#06B6D4",
-    accentAlt: "#67e8f9",
-    from: "From $4,000",
+    accentAlt: "#67E8F9",
+    from: "From $1,200",
   },
   {
     num: "03",
-    title: "Performance Engineering",
+    title: "Interactive 3D & WebGL Systems",
     description:
-      "60fps across all hardware through instancing, LOD systems, frustum culling, and WebWorker offloading strategies.",
-    tags: ["WebWorkers", "WASM", "WebGPU", "Profiling"],
+      "High-performance Three.js scenes, GPU instancing, procedural shaders, and lightweight interactive canvas experiences.",
+    tags: ["Three.js", "WebGL", "GLSL", "Vite"],
     icon: (
       <svg viewBox="0 0 40 40" fill="none" style={{ width: 32, height: 32 }}>
-        <path d="M8 32L8 20L16 20L16 32" stroke="#7C3AED" strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M18 32L18 14L26 14L26 32" stroke="#7C3AED" strokeWidth="1.5" strokeOpacity="0.6" strokeLinecap="round" />
-        <path d="M28 32L28 8L36 8L36 32" stroke="#7C3AED" strokeWidth="1.5" strokeOpacity="0.35" strokeLinecap="round" />
-        <path d="M6 32L38 32" stroke="#7C3AED" strokeWidth="1" strokeOpacity="0.3" />
+        <path d="M8 32L8 20L16 20L16 32" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M18 32L18 14L26 14L26 32" stroke="#2563EB" strokeWidth="1.5" strokeOpacity="0.6" strokeLinecap="round" />
+        <path d="M28 32L28 8L36 8L36 32" stroke="#2563EB" strokeWidth="1.5" strokeOpacity="0.35" strokeLinecap="round" />
+        <path d="M6 32L38 32" stroke="#2563EB" strokeWidth="1" strokeOpacity="0.3" />
         <path d="M10 17L19 11L27 14L35 6" stroke="#06B6D4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    accent: "#7C3AED",
-    accentAlt: "#a78bfa",
-    from: "From $5,000",
+    accent: "#2563EB",
+    accentAlt: "#93C5FD",
+    from: "From $800",
   },
   {
     num: "04",
-    title: "WebXR Development",
+    title: "Freelance Consulting & Technical Training",
     description:
-      "AR and VR experiences for modern headsets and mobile AR using the WebXR Device API — shipped to production.",
-    tags: ["WebXR", "AR", "VR", "A-Frame"],
+      "Commercial contract scoping, architecture reviews, DEPI-aligned cohort coaching, and bilingual MENA platform delivery management.",
+    tags: ["Consulting", "Architecture", "DEPI", "Training"],
     icon: (
       <svg viewBox="0 0 40 40" fill="none" style={{ width: 32, height: 32 }}>
-        <rect x="4" y="14" width="32" height="14" rx="7" stroke="#06B6D4" strokeWidth="1.5" />
-        <circle cx="13" cy="21" r="4" stroke="#06B6D4" strokeWidth="1" />
-        <circle cx="27" cy="21" r="4" stroke="#06B6D4" strokeWidth="1" />
-        <line x1="17" y1="21" x2="23" y2="21" stroke="#06B6D4" strokeWidth="1" strokeOpacity="0.5" />
-        <circle cx="13" cy="21" r="1.5" fill="#06B6D4" fillOpacity="0.5" />
-        <circle cx="27" cy="21" r="1.5" fill="#06B6D4" fillOpacity="0.5" />
+        <rect x="4" y="14" width="32" height="14" rx="7" stroke="#10B981" strokeWidth="1.5" />
+        <circle cx="13" cy="21" r="4" stroke="#10B981" strokeWidth="1" />
+        <circle cx="27" cy="21" r="4" stroke="#10B981" strokeWidth="1" />
+        <line x1="17" y1="21" x2="23" y2="21" stroke="#10B981" strokeWidth="1" strokeOpacity="0.5" />
+        <circle cx="13" cy="21" r="1.5" fill="#10B981" fillOpacity="0.5" />
+        <circle cx="27" cy="21" r="1.5" fill="#10B981" fillOpacity="0.5" />
       </svg>
     ),
-    accent: "#06B6D4",
-    accentAlt: "#67e8f9",
-    from: "From $12,000",
+    accent: "#10B981",
+    accentAlt: "#6EE7B7",
+    from: "From $500",
   },
 ];
 
@@ -171,15 +171,15 @@ export default function Services() {
           className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
-            <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#7C3AED" }}>
-              What I Build
+            <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#2563EB" }}>
+              Core Practice
             </span>
             <h2 className="mt-3 font-bold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
-              Services &amp; <span className="gradient-text">Expertise</span>
+              Engineering &amp; <span className="gradient-text">Services</span>
             </h2>
           </div>
-          <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#404052" }}>
-            End-to-end creative development. From first pixel to production deployment.
+          <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#94a3b8" }}>
+            Production-grade software systems from architectural design to containerized deployment.
           </p>
         </motion.div>
 

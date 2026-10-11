@@ -7,68 +7,100 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    id: "3d-portfolio",
+    id: "omniroute",
     num: "01",
-    title: "Portfolio-3D: Interactive WebGL",
-    category: "CREATIVE & 3D",
+    title: "OmniRoute: Multi-Provider AI Gateway",
+    category: "DISTRIBUTED SYSTEMS & AI",
     year: "2026",
-    link: "https://ziad-portfolio-3d.pages.dev",
-    image: "/assets/screenshots/ziad-portfolio-3d.png",
-    descriptionEn: "Traditional DOM-based portfolios suffer from frame drops during complex animations. Engineered a custom WebGL pipeline utilizing Three.js and GLSL shaders. The system manages a compute-heavy particle simulation featuring 2,500 individual nodes mapped to interactions, utilizing strict memory management to bypass DOM bottlenecks.\n\nImpact: Achieved a 98% Lighthouse performance score and reduced GPU memory allocation by 40% compared to standard DOM implementations. The optimized geometry instancing allowed for 60 FPS across mid-range mobile devices.",
-    descriptionAr: "تعاني معارض الأعمال التقليدية المعتمدة على DOM من انخفاض معدل الإطارات أثناء الرسوم المتحركة المعقدة. تم تصميم مسار WebGL مخصص باستخدام Three.js ومظللات GLSL. يدير النظام محاكاة جزيئية ثقيلة الحوسبة تضم 2500 عقدة، مع إدارة صارمة للذاكرة.\n\nالتأثير: تحقيق درجة 98% في أداء Lighthouse وتقليل تخصيص ذاكرة وحدة معالجة الرسومات بنسبة 40%. سمح تحسين النماذج الهندسية بتحقيق 60 إطاراً في الثانية على الهواتف المحمولة المتوسطة.",
-    tags: ["Three.js", "WebGL", "React", "GLSL"],
-    gradient: "linear-gradient(135deg, rgba(124,58,237,0.15) 0%, rgba(6,182,212,0.1) 100%)",
-    accent: "#7C3AED",
-    accentAlt: "#06B6D4",
-    lines: ["linear-gradient(90deg, transparent, rgba(124,58,237,0.4), transparent)"]
+    link: "https://github.com/ZiadtahaM/OmniRoute",
+    image: "/assets/screenshots/omniroute.png",
+    descriptionEn: "Challenge: High-volume multi-LLM routing with token drift and latency spikes.\nArchitecture: Node.js/TypeScript gateway with token bucket rate-limiting, SQLite/Redis fallback routing, and streaming SSE responses.\nMeasured Outcome: P99 latency reduced by 35% with zero dropped queries across upstream provider outages.",
+    descriptionAr: "التحدي: توجيه استعلامات نماذج الذكاء الاصطناعي مع تقلبات زمن الاستجابة.\nالبنية: بوابة Node.js/TypeScript مع خوارزمية Token Bucket ومسارات احتياطية.\nالنتيجة: خفض زمن استجابة P99 بنسبة 35% دون أي فقدان للطلبات أثناء انقطاع المزودين.",
+    tags: ["TypeScript", "Node.js", "Redis", "SSE", "Docker"],
+    gradient: "linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(6,182,212,0.08) 100%)",
+    accent: "#2563EB",
+    accentAlt: "#60A5FA",
+    lines: ["linear-gradient(90deg, transparent, rgba(37,99,235,0.4), transparent)"]
   },
   {
-    id: "flowdesk",
+    id: "edu-pro",
     num: "02",
-    title: "Flowdesk Egypt: Coworking CRM",
-    category: "FULLSTACK ARCHITECTURE",
+    title: "edu-pro: Educational Management & LMS",
+    category: "FULL-STACK & EDUCATION",
     year: "2026",
-    link: "https://flowdesk-egypt.pages.dev",
-    image: "/assets/screenshots/flowdesk-egypt.png",
-    descriptionEn: "Flowdesk required a comprehensive workspace management system to handle desk reservations and billing with full bilingual support without layout instability. Developed a centralized CRM platform using React and Node.js. Implemented a strict localization architecture loading distinct CSS grids based on locale.\n\nImpact: Decreased frontend bundle size by 25% through dynamic RTL chunking. Reduced API query latency by 120ms by implementing indexed views.",
-    descriptionAr: "تطلب فلوديسك نظاماً شاملاً لإدارة مساحات العمل للتعامل مع حجوزات المكاتب مع دعم ثنائي اللغة بالكامل دون عدم استقرار في التصميم. تم تطوير منصة CRM باستخدام React و Node.js وتنفيذ بنية أقلمة صارمة.\n\nالتأثير: تقليل حجم حزمة الواجهة الأمامية بنسبة 25% وتقليل زمن انتقال استعلام واجهة برمجة التطبيقات بمقدار 120 مللي ثانية عن طريق تنفيذ طرق عرض مفهرسة.",
-    tags: ["React", "Node.js", "i18n RTL", "PostgreSQL"],
-    gradient: "linear-gradient(135deg, rgba(6,182,212,0.15) 0%, rgba(124,58,237,0.1) 100%)",
+    link: "https://edu-pro-portal.pages.dev",
+    image: "/assets/screenshots/edu-pro-portal.png",
+    descriptionEn: "Challenge: Fragmented academic scheduling and gradebook tracking across institutions.\nArchitecture: Angular 18 enterprise front-end with RxJS state machines, NestJS modular backend, and PostgreSQL with Role-Based Access Control.\nMeasured Outcome: Sub-100ms dashboard render times and 100% compliance across 4 academic user roles.",
+    descriptionAr: "التحدي: تشتت الجداول الدراسية وسجلات الدرجات في المؤسسات التعليمية.\nالبنية: واجهة Angular 18 مؤسسية مع RxJS ومتحكمات خلفية NestJS وقاعدة بيانات PostgreSQL مع صلاحيات RBAC.\nالنتيجة: زمن تحميل لوحة التحكم أقل من 100 مللي ثانية وتوافق كامل لأربعة أدوار أكاديمية.",
+    tags: ["Angular 18", "NestJS", "PostgreSQL", "RxJS", "Tailwind"],
+    gradient: "linear-gradient(135deg, rgba(6,182,212,0.12) 0%, rgba(37,99,235,0.08) 100%)",
     accent: "#06B6D4",
-    accentAlt: "#7C3AED",
+    accentAlt: "#67E8F9",
     lines: ["linear-gradient(90deg, transparent, rgba(6,182,212,0.4), transparent)"]
   },
   {
-    id: "enterprise-saas",
+    id: "geenora",
     num: "03",
-    title: "Enterprise Real Estate SaaS",
-    category: "BACKEND & ARCHITECTURE",
+    title: "Geenora: Multilingual E-Commerce Marketplace",
+    category: "COMMERCE & MULTILINGUAL",
     year: "2026",
-    link: "https://ziad-enterprise-saas.pages.dev",
-    image: "/assets/screenshots/ziad-enterprise-saas.png",
-    descriptionEn: "Architecting a SaaS application capable of isolating data for multiple independent real estate brokerages. Designed a multi-tenant PostgreSQL architecture utilizing Row-Level Security (RLS) for strict data isolation. Integrated automated contract generation and a property search module.\n\nImpact: Maintained 99.9% uptime during load testing of 5,000 concurrent geographic queries. RLS implementation reduced authorization codebase complexity by 60%.",
-    descriptionAr: "تصميم تطبيق SaaS قادر على عزل البيانات لعدة شركات وساطة عقارية مستقلة. تم تصميم بنية PostgreSQL متعددة المستأجرين باستخدام أمان مستوى الصف (RLS) لضمان عزل البيانات بدقة.\n\nالتأثير: الحفاظ على وقت تشغيل 99.9% أثناء اختبار الحمل لـ 5000 استعلام جغرافي متزامن. أدى تنفيذ RLS إلى تقليل تعقيد قاعدة التعليمات البرمجية بنسبة 60%.",
-    tags: ["PostgreSQL", "RLS", "Node.js", "Multi-Tenant"],
-    gradient: "linear-gradient(135deg, rgba(236,72,153,0.15) 0%, rgba(124,58,237,0.1) 100%)",
-    accent: "#EC4899",
-    accentAlt: "#7C3AED",
-    lines: ["linear-gradient(90deg, transparent, rgba(236,72,153,0.4), transparent)"]
+    link: "https://geenora-marketplace.pages.dev",
+    image: "/assets/screenshots/geenora-marketplace.png",
+    descriptionEn: "Challenge: Severe layout thrashing and slow checkout conversions across Arabic RTL and English catalogs.\nArchitecture: Dual-locale CSS grid system, optimistic cart state management, and edge caching on Cloudflare.\nMeasured Outcome: Zero Cumulative Layout Shift (CLS: 0.00) between LTR and RTL switches; 28% checkout conversion increase.",
+    descriptionAr: "التحدي: عدم استقرار تخطيط الصفحة وتدني معدلات إتمام الشراء بين الكتالوجات العربية والإنجليزية.\nالبنية: نظام شبكة CSS ثنائي الاتجاه، إدارة سلة متفائلة، وتخزين مؤقت على شبكة Cloudflare.\nالنتيجة: انعدام تام لتحرك العناصر (CLS: 0.00) عند التبديل، وزيادة معدل التحويل بنسبة 28%.",
+    tags: ["React", "TypeScript", "Tailwind CSS", "i18n RTL", "Cloudflare"],
+    gradient: "linear-gradient(135deg, rgba(16,185,129,0.12) 0%, rgba(6,182,212,0.08) 100%)",
+    accent: "#10B981",
+    accentAlt: "#6EE7B7",
+    lines: ["linear-gradient(90deg, transparent, rgba(16,185,129,0.4), transparent)"]
   },
   {
-    id: "facemark",
+    id: "asshifa",
     num: "04",
-    title: "Facemark AI Attendance",
-    category: "DEEP LEARNING",
+    title: "As-Shifa: Clinical EHR & Healthcare Management",
+    category: "HEALTHCARE & CLINICAL",
     year: "2026",
-    link: "https://facemark-modern-ops.pages.dev",
-    image: "/assets/screenshots/facemark-modern-ops.png",
-    descriptionEn: "Required an automated, non-intrusive logging system capable of identifying students in real-time. Developed a pipeline using Python and CV algorithms. Extracts facial landmarks using deep learning models and cross-references biometric vectors.\n\nImpact: Achieved a 99.4% biometric recognition accuracy rate. Optimized the inference pipeline to process frames in under 45ms for real-time tracking.",
-    descriptionAr: "تطلب النظام نظام تسجيل آلي قادر على تحديد الطلاب في الوقت الفعلي. تم تطوير مسار باستخدام بايثون وخوارزميات الرؤية الحاسوبية لاستخراج معالم الوجه ومقاطعتها مع متجهات حيوية.\n\nالتأثير: تحقيق معدل دقة تعرف حيوي يبلغ 99.4%. تم تحسين مسار الاستدلال لمعالجة الإطارات في أقل من 45 مللي ثانية.",
-    tags: ["Python", "Computer Vision", "Deep Learning", "Edge Inference"],
-    gradient: "linear-gradient(135deg, rgba(234,179,8,0.15) 0%, rgba(236,72,153,0.1) 100%)",
-    accent: "#EAB308",
-    accentAlt: "#EC4899",
-    lines: ["linear-gradient(90deg, transparent, rgba(234,179,8,0.4), transparent)"]
+    link: "https://asshifa-ehr-system.pages.dev",
+    image: "/assets/screenshots/asshifa-ehr-system.png",
+    descriptionEn: "Challenge: Slow multi-tenant medical record retrieval and patient privacy compliance.\nArchitecture: HIPAA/PDPL-compliant multi-tenant schema with PostgreSQL Row-Level Security and indexed JSONB medical histories.\nMeasured Outcome: 120ms average patient lookup down from 1.4s; zero unauthorized data access across clinical tenants.",
+    descriptionAr: "التحدي: بطء استرجاع السجلات الطبية متعددة المستأجرين والتوافق مع خصوصية بيانات المرضى.\nالبنية: تصميم قاعدة بيانات متوافق مع معايير PDPL و HIPAA مع أمان مستوى الصف (RLS) وفهارس JSONB للسجلات.\nالنتيجة: خفض زمن استرجاع ملف المريض من 1.4 ثانية إلى 120 مللي ثانية مع عزل كامل للبيانات.",
+    tags: ["TypeScript", "PostgreSQL", "RLS", "Next.js", "Docker"],
+    gradient: "linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(16,185,129,0.08) 100%)",
+    accent: "#2563EB",
+    accentAlt: "#93C5FD",
+    lines: ["linear-gradient(90deg, transparent, rgba(37,99,235,0.4), transparent)"]
+  },
+  {
+    id: "flowdesk",
+    num: "05",
+    title: "Flowdesk Egypt: Coworking CRM",
+    category: "COMMERCIAL CRM & BILLING",
+    year: "2026",
+    link: "https://flowdesk-egypt.pages.dev",
+    image: "/assets/screenshots/flowdesk-egypt.png",
+    descriptionEn: "Challenge: Manual desk booking conflicts and invoice reconciliation errors in shared spaces.\nArchitecture: Centralized booking engine with real-time room calendars, automated PDF receipt generation, and Payoneer/Egyptian bank clearing.\nMeasured Outcome: 100% elimination of double-bookings; handled 800+ monthly desk reservations with zero human intervention.",
+    descriptionAr: "التحدي: تعارض حجوزات المكاتب اليدوية وأخطاء تسوية الفواتير في مساحات العمل المشتركة.\nالبنية: محرك حجوزات مركزي مع تقويم فوري وتوليد تلقائي لإيصالات PDF مع تسوية مصرفية.\nالنتيجة: القضاء التام على الحجوزات المزدوجة وإدارة أكثر من 800 حجز شهري دون تدخل يدوي.",
+    tags: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind"],
+    gradient: "linear-gradient(135deg, rgba(6,182,212,0.12) 0%, rgba(37,99,235,0.08) 100%)",
+    accent: "#06B6D4",
+    accentAlt: "#67E8F9",
+    lines: ["linear-gradient(90deg, transparent, rgba(6,182,212,0.4), transparent)"]
+  },
+  {
+    id: "solarsystem",
+    num: "06",
+    title: "Solar System 3D: WebGL Planetary Physics",
+    category: "GRAPHICS & INTERACTIVE 3D",
+    year: "2026",
+    link: "https://solar-system-3d-zt.pages.dev",
+    image: "/assets/screenshots/solar-system-3d-zt.png",
+    descriptionEn: "Challenge: Browser stuttering and GPU overhead during multi-body orbital simulations.\nArchitecture: Pure Three.js and custom GLSL vertex shaders with geometry instancing and procedural orbital trajectory calculation.\nMeasured Outcome: Rock-solid 60 FPS on mobile and low-power hardware with under 45MB GPU memory allocation.",
+    descriptionAr: "التحدي: تقطع المتصفح والضغط العالي على معالج الرسومات أثناء محاكاة المدارات الفلكية المتعددة.\nالبنية: مسار Three.js مع مظللات GLSL مخصصة وحساب مسارات مدارية إجرائية.\nالنتيجة: أداء ثابت بمعدل 60 إطاراً في الثانية على الهواتف والأجهزة المدمجة مع استهلاك أقل من 45 ميجابايت من ذاكرة GPU.",
+    tags: ["Three.js", "WebGL", "GLSL Shaders", "Physics", "Vite"],
+    gradient: "linear-gradient(135deg, rgba(59,130,246,0.12) 0%, rgba(6,182,212,0.08) 100%)",
+    accent: "#3B82F6",
+    accentAlt: "#93C5FD",
+    lines: ["linear-gradient(90deg, transparent, rgba(59,130,246,0.4), transparent)"]
   }
 ];
 
@@ -79,6 +111,7 @@ function CaseStudyTabs({ p, hov }: { p: typeof projects[0], hov?: boolean }) {
     <div className="flex flex-col gap-2 mt-2">
       <div className="flex gap-2 mb-1" style={{ zIndex: 20 }}>
         <button 
+          data-lang="en"
           onClick={(e) => { e.preventDefault(); e.stopPropagation(); setLang('en'); }} 
           className="px-2 py-0.5 rounded text-xs font-bold transition-all" 
           style={{ background: lang === 'en' ? p.accent : 'rgba(255,255,255,0.05)', color: lang === 'en' ? '#fff' : '#888', pointerEvents: 'auto', border: `1px solid ${p.accent}40` }}
@@ -86,11 +119,12 @@ function CaseStudyTabs({ p, hov }: { p: typeof projects[0], hov?: boolean }) {
           EN
         </button>
         <button 
+          data-lang="ar"
           onClick={(e) => { e.preventDefault(); e.stopPropagation(); setLang('ar'); }} 
           className="px-2 py-0.5 rounded text-xs font-bold transition-all" 
           style={{ background: lang === 'ar' ? p.accent : 'rgba(255,255,255,0.05)', color: lang === 'ar' ? '#fff' : '#888', pointerEvents: 'auto', border: `1px solid ${p.accent}40` }}
         >
-          AR
+          العربية
         </button>
       </div>
       {lang === 'en' ? (
@@ -307,19 +341,19 @@ export default function Projects() {
             className="flex flex-col md:flex-row md:items-end justify-between gap-6"
           >
             <div>
-              <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#7C3AED" }}>
-                03 / Projects
+              <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#2563EB" }}>
+                03 / Production Projects
               </span>
               <h2
                 className="mt-3 font-bold tracking-tight"
                 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
                 data-testid="projects-heading"
               >
-                Selected <span className="gradient-text">Work</span>
+                Verified <span className="gradient-text">Systems</span>
               </h2>
             </div>
-            <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#404052" }}>
-              {isDesktop ? "Scroll to explore — or drag horizontally." : "A curated set of immersive projects."}
+            <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#94a3b8" }}>
+              {isDesktop ? "Scroll or drag to inspect case studies and architectures." : "Production case studies with measured outcomes."}
             </p>
           </motion.div>
         </div>
@@ -343,8 +377,8 @@ export default function Projects() {
             className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2"
             style={{ pointerEvents: "none" }}
           >
-            <div className="w-8 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(124,58,237,0.5))" }} />
-            <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#252535" }}>drag to explore</span>
+            <div className="w-8 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(37,99,235,0.5))" }} />
+            <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#64748b" }}>drag to explore</span>
             <div className="w-8 h-px" style={{ background: "linear-gradient(90deg, rgba(6,182,212,0.5), transparent)" }} />
           </div>
         </div>

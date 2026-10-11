@@ -2,21 +2,21 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const skills = [
-  { name: "Three.js / WebGL", level: 97, color: "#7C3AED" },
-  { name: "React & TypeScript", level: 95, color: "#06B6D4" },
-  { name: "React Three Fiber", level: 93, color: "#7C3AED" },
-  { name: "GLSL Shaders", level: 88, color: "#06B6D4" },
-  { name: "GSAP Animation", level: 90, color: "#7C3AED" },
-  { name: "Node.js", level: 85, color: "#06B6D4" },
-  { name: "Blender 3D", level: 80, color: "#7C3AED" },
-  { name: "WebXR / AR / VR", level: 78, color: "#06B6D4" },
+  { name: "Angular 18 & RxJS", level: 95, color: "#2563EB" },
+  { name: "NestJS & Node.js", level: 92, color: "#06B6D4" },
+  { name: "PostgreSQL & Database Optimization", level: 90, color: "#2563EB" },
+  { name: "Three.js & WebGL Simulations", level: 88, color: "#06B6D4" },
+  { name: "Docker & Linux Administration", level: 85, color: "#2563EB" },
+  { name: "Redis Caching & Streams", level: 86, color: "#06B6D4" },
+  { name: "C & Systems Programming", level: 82, color: "#2563EB" },
+  { name: "RESTful & GraphQL API Architecture", level: 92, color: "#06B6D4" },
 ];
 
 const domains = [
-  { label: "Realtime 3D", sub: "Three.js · WebGL · GLSL · R3F", color: "#7C3AED" },
-  { label: "Frontend", sub: "React · TypeScript · Framer Motion", color: "#06B6D4" },
-  { label: "Backend", sub: "Node.js · PostgreSQL · Redis", color: "#7C3AED" },
-  { label: "Creative", sub: "Blender · WebXR · AR / VR · GSAP", color: "#06B6D4" },
+  { label: "Frontend Systems", sub: "Angular · React · TypeScript · RxJS", color: "#2563EB" },
+  { label: "Backend Architecture", sub: "NestJS · Node.js · Express · Java", color: "#06B6D4" },
+  { label: "Data & Storage", sub: "PostgreSQL · Redis · RLS · ACID", color: "#2563EB" },
+  { label: "Graphics & 3D", sub: "Three.js · WebGL · GLSL · Canvas", color: "#06B6D4" },
 ];
 
 export default function Skills() {
@@ -35,15 +35,15 @@ export default function Skills() {
           transition={{ duration: 0.7 }}
           className="mb-20"
         >
-          <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#7C3AED" }}>
-            02 / Skills
+          <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#2563EB" }}>
+            02 / Technical Skills
           </span>
           <h2
             className="mt-3 font-bold tracking-tight"
             style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
             data-testid="skills-heading"
           >
-            Expertise &amp; <span className="gradient-text">Craft</span>
+            Engineering &amp; <span className="gradient-text">Core Stack</span>
           </h2>
         </motion.div>
 
@@ -61,9 +61,9 @@ export default function Skills() {
                 data-testid={`skill-${skill.name.replace(/\s+/g, "-").toLowerCase()}`}
               >
                 <div className="flex justify-between mb-2">
-                  <span className="text-sm font-medium" style={{ color: "#b0b0c0" }}>{skill.name}</span>
-                  <span className="text-xs font-mono tabular-nums" style={{ color: skill.color === "#7C3AED" ? "#a78bfa" : "#67e8f9" }}>
-                    {skill.level}
+                  <span className="text-sm font-medium" style={{ color: "#cbd5e1" }}>{skill.name}</span>
+                  <span className="text-xs font-mono tabular-nums" style={{ color: skill.color === "#2563EB" ? "#93c5fd" : "#67e8f9" }}>
+                    {skill.level}%
                   </span>
                 </div>
                 <div className="relative h-px" style={{ background: "rgba(255,255,255,0.05)" }}>
@@ -73,7 +73,7 @@ export default function Skills() {
                     animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
                     transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
                     style={{
-                      background: `linear-gradient(90deg, ${skill.color}, ${skill.color === "#7C3AED" ? "#06B6D4" : "#7C3AED"})`,
+                      background: `linear-gradient(90deg, ${skill.color}, ${skill.color === "#2563EB" ? "#06B6D4" : "#2563EB"})`,
                       boxShadow: `0 0 8px ${skill.color}80`,
                     }}
                   />
@@ -82,7 +82,7 @@ export default function Skills() {
                     initial={{ left: "0%" }}
                     animate={inView ? { left: `${skill.level}%` } : { left: "0%" }}
                     transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
-                    style={{ background: skill.color === "#7C3AED" ? "#a78bfa" : "#67e8f9", boxShadow: `0 0 6px ${skill.color}` }}
+                    style={{ background: skill.color === "#2563EB" ? "#93c5fd" : "#67e8f9", boxShadow: `0 0 6px ${skill.color}` }}
                   />
                 </div>
               </motion.div>
@@ -106,8 +106,8 @@ export default function Skills() {
                   style={{ background: `${d.color}08`, border: `1px solid ${d.color}20` }}
                 >
                   <div className="w-6 h-px mb-3" style={{ background: d.color }} />
-                  <p className="text-sm font-semibold mb-1" style={{ color: d.color === "#7C3AED" ? "#a78bfa" : "#67e8f9" }}>{d.label}</p>
-                  <p className="text-xs leading-relaxed" style={{ color: "#404052" }}>{d.sub}</p>
+                  <p className="text-sm font-semibold mb-1" style={{ color: d.color === "#2563EB" ? "#93c5fd" : "#67e8f9" }}>{d.label}</p>
+                  <p className="text-xs leading-relaxed" style={{ color: "#94a3b8" }}>{d.sub}</p>
                 </motion.div>
               ))}
             </div>
@@ -116,13 +116,9 @@ export default function Skills() {
               className="p-7 rounded-2xl"
               style={{ background: "rgba(255,255,255,0.015)", border: "1px solid rgba(255,255,255,0.05)" }}
             >
-              <p className="text-xs font-mono tracking-widest uppercase mb-4" style={{ color: "#333345" }}>Philosophy</p>
-              <p className="text-sm leading-relaxed" style={{ color: "#505060" }}>
-                My stack evolves constantly — but the core never changes:{" "}
-                <span style={{ color: "#a78bfa" }}>performance</span>,{" "}
-                <span style={{ color: "#67e8f9" }}>craft</span>, and{" "}
-                <span style={{ color: "#a78bfa" }}>obsessive attention to detail</span>.
-                Every tool I pick up earns its place through results.
+              <p className="text-xs font-mono tracking-widest uppercase mb-4" style={{ color: "#64748b" }}>Architecture Principles</p>
+              <p className="text-sm leading-relaxed" style={{ color: "#94a3b8" }}>
+                Deep modules with compact public interfaces, strict schema boundaries with input validation, append-only logs for critical state transitions, and responsive multi-platform user journeys. Every technology selected serves verified throughput, maintainability, and end-user speed.
               </p>
             </div>
           </motion.div>

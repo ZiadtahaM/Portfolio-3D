@@ -87,7 +87,7 @@ export default function Cursor() {
           top: 0, left: 0,
           width: 8, height: 8,
           borderRadius: "50%",
-          background: hovering ? "#06B6D4" : "#7C3AED",
+          background: hovering ? "#06B6D4" : "#2563EB",
           pointerEvents: "none",
           zIndex: 9999,
           willChange: "transform",
@@ -103,7 +103,7 @@ export default function Cursor() {
           borderRadius: "50%",
           border: hovering
             ? "1.5px solid rgba(6,182,212,0.8)"
-            : "1.5px solid rgba(124,58,237,0.5)",
+            : "1.5px solid rgba(37,99,235,0.5)",
           background: hovering ? "rgba(6,182,212,0.05)" : "transparent",
           pointerEvents: "none",
           zIndex: 9998,

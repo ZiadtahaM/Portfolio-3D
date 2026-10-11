@@ -4,51 +4,67 @@ import { motion, useInView } from "framer-motion";
 const experiences = [
   {
     id: 1,
-    role: "Senior Creative Developer",
-    company: "Studio Zero",
-    period: "2022 — Present",
-    yearShort: "2022",
-    description: "Lead creative technologist for a boutique studio specializing in immersive digital experiences. Built WebXR environments for Fortune 500 brands, shipped 15+ production Three.js projects.",
+    role: "Independent Software Consultant & Freelance Engineer",
+    company: "Mostaqel, Khamsat & Nafizly Platforms",
+    period: "2023 to Present",
+    yearShort: "2023",
+    description: "Delivering full-stack web applications, custom CRM platforms, and database architectures for business clients across Egypt, Saudi Arabia, and the UAE.",
     achievements: [
-      "Led development of a real-time 3D configurator used by 500k+ users",
-      "Reduced render overhead 40% through custom frustum culling pipeline",
-      "Mentored 4 junior developers in WebGL and shader programming",
+      "Completed 30+ commercial software contracts with 100% on-time milestone delivery",
+      "Maintained 5.0 / 5.0 client satisfaction rating across verified regional platforms",
+      "Engineered automated PDF invoicing and Egyptian banking / Payoneer clearing workflows",
     ],
-    accent: "#7C3AED",
-    accentAlt: "#a78bfa",
-    status: "Current",
+    accent: "#2563EB",
+    accentAlt: "#60A5FA",
+    status: "Active",
   },
   {
     id: 2,
-    role: "Frontend Engineer",
-    company: "Luminary Labs",
-    period: "2020 — 2022",
-    yearShort: "2020",
-    description: "Full-stack frontend at a Y Combinator–backed startup. Built the core product UI from 0→1, including a canvas-based design tool handling 10k+ simultaneous collaborative sessions.",
+    role: "Backend Software Engineer",
+    company: "Huma-volve",
+    period: "2024 to 2025",
+    yearShort: "2024",
+    description: "Engineered scalable REST services, database query optimizations, and background queue workers for high-volume customer workflows.",
     achievements: [
-      "Architected collaborative real-time canvas with CRDT and WebRTC",
-      "Shipped design system adopted by 3 product teams",
-      "Improved Lighthouse performance score from 42 to 96",
+      "Reduced API latency by 35% through PostgreSQL indexing and Redis cache-aside strategies",
+      "Implemented strict JWT auth with refresh token rotation and RBAC security boundaries",
+      "Wrote end-to-end contract test suites eliminating regression errors before production",
     ],
     accent: "#06B6D4",
-    accentAlt: "#67e8f9",
+    accentAlt: "#67E8F9",
     status: null,
   },
   {
     id: 3,
-    role: "Creative Technologist",
-    company: "Pixel Forge",
-    period: "2019 — 2020",
-    yearShort: "2019",
-    description: "Creative technologist at a digital agency, bridging design and engineering for interactive campaigns. Pioneered WebGL-first production pipelines for major entertainment brands.",
+    role: "Engineering Fellow (Angular Enterprise)",
+    company: "Digital Egypt Pioneers Initiative (DEPI)",
+    period: "2024 to Present",
+    yearShort: "2024",
+    description: "Selected for Egypt's flagship government software engineering fellowship, mastering modern enterprise front-end systems and cloud architectures.",
     achievements: [
-      "Delivered award-winning WebGL campaign for major film studio",
-      "Built internal WebGL boilerplate adopted agency-wide",
-      "First engineer to ship WebXR feature to production at the agency",
+      "Architected complex state-machine front-ends with Angular 18 and RxJS reactive streams",
+      "Built multi-tenant educational portals compliant with Egyptian digital accessibility standards",
+      "Collaborated in agile sprint deliveries with automated CI/CD and lint gates",
     ],
-    accent: "#7C3AED",
-    accentAlt: "#a78bfa",
-    status: null,
+    accent: "#10B981",
+    accentAlt: "#6EE7B7",
+    status: "Fellowship",
+  },
+  {
+    id: 4,
+    role: "B.Sc. in Computer Science",
+    company: "Egyptian E-Learning University (EELU) Alexandria",
+    period: "2022 to 2026",
+    yearShort: "2022",
+    description: "Core academic training in computer science, distributed algorithms, relational database theory, and operating systems.",
+    achievements: [
+      "Coursework: Data Structures, Algorithms, Distributed Databases, OS, Computer Networks",
+      "Built C99 systems programming tools including custom shell and bytecode interpreter",
+      "Active competitive programming participant focusing on graph theory and dynamic programming",
+    ],
+    accent: "#3B82F6",
+    accentAlt: "#93C5FD",
+    status: "Class of 2026",
   },
 ];
 
@@ -68,7 +84,7 @@ export default function Experience() {
           transition={{ duration: 0.7 }}
           className="mb-20"
         >
-          <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#7C3AED" }}>
+          <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#2563EB" }}>
             04 / Experience
           </span>
           <h2
@@ -76,7 +92,7 @@ export default function Experience() {
             style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
             data-testid="experience-heading"
           >
-            Career <span className="gradient-text">Timeline</span>
+            Verified <span className="gradient-text">Timeline</span>
           </h2>
         </motion.div>
 

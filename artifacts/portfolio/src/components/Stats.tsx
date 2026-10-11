@@ -2,10 +2,10 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-  { value: 500, suffix: "K+", label: "Users Reached", color: "#7C3AED" },
-  { value: 15, suffix: "+", label: "Shipped Products", color: "#06B6D4" },
-  { value: 40, suffix: "+", label: "Client Projects", color: "#7C3AED" },
-  { value: 5, suffix: "+", label: "Years of Craft", color: "#06B6D4" },
+  { value: 30, suffix: "+", label: "Client Deliveries", color: "#2563EB" },
+  { value: 35, suffix: "%", label: "Latency Reduction", color: "#06B6D4" },
+  { value: 99, suffix: ".9%", label: "System Uptime", color: "#10B981" },
+  { value: 124, suffix: "+", label: "GitHub Repositories", color: "#3B82F6" },
 ];
 
 function Counter({ value, suffix, color, trigger }: { value: number; suffix: string; color: string; trigger: boolean }) {

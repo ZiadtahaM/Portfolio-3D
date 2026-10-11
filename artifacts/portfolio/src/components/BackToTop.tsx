@@ -29,8 +29,8 @@ export default function BackToTop() {
             height: 44,
             borderRadius: "50%",
             background: "rgba(5,5,8,0.9)",
-            border: "1px solid rgba(124,58,237,0.4)",
-            boxShadow: "0 0 20px rgba(124,58,237,0.2)",
+            border: "1px solid rgba(37,99,235,0.4)",
+            boxShadow: "0 0 20px rgba(37,99,235,0.2)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -39,7 +39,7 @@ export default function BackToTop() {
           }}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M7 11V3M3 7l4-4 4 4" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M7 11V3M3 7l4-4 4 4" stroke="#60a5fa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </motion.button>
       )}

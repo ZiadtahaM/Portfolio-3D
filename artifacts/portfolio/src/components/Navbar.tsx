@@ -59,7 +59,7 @@ export default function Navbar() {
           style={{ fontFamily: "'Space Grotesk', sans-serif", letterSpacing: "-0.04em" }}
           data-testid="nav-logo"
         >
-          AC
+          ZT
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -77,7 +77,7 @@ export default function Navbar() {
                 <motion.div
                   layoutId="nav-indicator"
                   className="absolute -bottom-1 left-0 right-0 h-px"
-                  style={{ background: "linear-gradient(90deg, #7C3AED, #06B6D4)" }}
+                  style={{ background: "linear-gradient(90deg, #2563EB, #06B6D4)" }}
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
@@ -88,10 +88,10 @@ export default function Navbar() {
             onClick={(e) => scrollTo(e, "#contact")}
             data-cursor-label="Hire"
             className="magnetic-btn px-4 py-2 text-xs font-semibold rounded-lg text-white font-mono tracking-wider uppercase"
-            style={{ background: "linear-gradient(135deg, #7C3AED, #06B6D4)", boxShadow: "0 0 20px rgba(124,58,237,0.25)" }}
+            style={{ background: "linear-gradient(135deg, #2563EB, #06B6D4)", boxShadow: "0 0 20px rgba(37,99,235,0.25)" }}
             data-testid="nav-cta"
           >
-            Hire Me
+            Hire Direct
           </a>
         </div>
 
@@ -123,7 +123,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={(e) => scrollTo(e, link.href)}
                 className="pt-3 pb-2 text-sm font-medium transition-colors"
-                style={{ color: active === link.href ? "#a78bfa" : "#404052" }}
+                style={{ color: active === link.href ? "#60a5fa" : "#404052" }}
                 data-testid={`mobile-nav-${link.label.toLowerCase()}`}
               >
                 {link.label}
