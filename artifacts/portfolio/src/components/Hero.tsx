@@ -1,37 +1,9 @@
-import { Suspense, useRef, useEffect, useState } from "react";
+import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 import { motion } from "framer-motion";
 import * as THREE from "three";
 import { useWebGL } from "../hooks/useWebGL";
-
-const SCRAMBLE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%";
-
-function useScramble(text: string, trigger: boolean, speed = 40) {
-  const [output, setOutput] = useState(text);
-  useEffect(() => {
-    if (!trigger) return;
-    let frame = 0;
-    const id = setInterval(() => {
-      setOutput(
-        text
-          .split("")
-          .map((char, i) =>
-            char === " "
-              ? " "
-              : i < frame / 2
-              ? char
-              : SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
-          )
-          .join("")
-      );
-      frame++;
-      if (frame / 2 >= text.length) clearInterval(id);
-    }, speed);
-    return () => clearInterval(id);
-  }, [trigger, text, speed]);
-  return output;
-}
 
 function AnimatedSphere() {
   const meshRef = useRef<THREE.Mesh>(null);
@@ -43,7 +15,7 @@ function AnimatedSphere() {
   });
   return (
     <Sphere ref={meshRef} args={[1.8, 128, 128]}>
-      <MeshDistortMaterial color="#2563EB" attach="material" distort={0.35} speed={2.0} roughness={0.15} metalness={0.7} emissive="#1e3a8a" emissiveIntensity={0.3} />
+      <MeshDistortMaterial color="#2563EB" attach="material" distort={0.25} speed={1.5} roughness={0.15} metalness={0.7} emissive="#1e3a8a" emissiveIntensity={0.3} />
     </Sphere>
   );
 }
@@ -78,15 +50,6 @@ const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export default function Hero() {
   const hasWebGL = useWebGL();
-  const [scramble, setScramble] = useState(false);
-  const ziad = useScramble("Ziad", scramble, 35);
-  const taha = useScramble("Taha", scramble, 35);
-
-  useEffect(() => {
-    const t = setTimeout(() => setScramble(true), 600);
-    return () => clearTimeout(t);
-  }, []);
-
   const scrollTo = (id: string) => document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
@@ -101,24 +64,24 @@ export default function Hero() {
           <motion.div variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } } }}>
             <div className="flex items-center gap-4 flex-wrap">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono tracking-widest uppercase" style={{ background: "rgba(37,99,235,0.1)", border: "1px solid rgba(37,99,235,0.25)", color: "#93c5fd" }}>
-                <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#2563EB" }} />
+                <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#2563EB" }} />
                 Available for Engineering Contracts
               </span>
-              <span className="text-xs font-mono" style={{ color: "#94a3b8" }}>Alexandria, Egypt</span>
+              <span className="text-xs font-mono text-slate-400">Alexandria, Egypt</span>
             </div>
           </motion.div>
 
           <motion.div variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease } } }}>
-            <h1 className="font-black leading-[0.95] tracking-tighter" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(4rem, 10vw, 7.5rem)" }}>
-              <span className="block text-white">{ziad}</span>
-              <span className="block gradient-text">{taha}</span>
+            <h1 className="font-black leading-[0.95] tracking-tighter" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(3.5rem, 8vw, 6.5rem)" }}>
+              <span className="block text-white">Ziad</span>
+              <span className="block gradient-text">Taha</span>
             </h1>
           </motion.div>
 
           <motion.div variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } } }}>
             <div className="flex items-center gap-3">
               <div className="w-8 h-px" style={{ background: "linear-gradient(90deg, #2563EB, transparent)" }} />
-              <p className="text-sm font-mono tracking-widest uppercase" style={{ color: "#94a3b8" }}>
+              <p className="text-sm font-mono tracking-widest uppercase text-slate-300">
                 Full-Stack Software Engineer &amp; System Architect
               </p>
             </div>
@@ -126,10 +89,9 @@ export default function Hero() {
 
           <motion.p
             variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } } }}
-            className="text-base leading-relaxed max-w-md"
-            style={{ color: "#cbd5e1" }}
+            className="text-base leading-relaxed max-w-md text-slate-300"
           >
-            Building scalable web applications, distributed APIs, and high-performance user interfaces. 2+ years of production delivery across MENA platforms and European clients. Alumnus of the Digital Egypt Pioneers Initiative (DEPI).
+            Building scalable web applications, distributed APIs, and high-performance user interfaces. Two years of delivery across regional MENA client contracts and remote software teams. Alumnus of the Digital Egypt Pioneers Initiative (DEPI).
           </motion.p>
 
           <motion.div
@@ -138,19 +100,26 @@ export default function Hero() {
           >
             <button
               onClick={() => scrollTo("#projects")}
-              data-cursor-label="Projects"
               className="magnetic-btn px-7 py-3.5 rounded-xl text-sm font-semibold text-white"
               style={{ background: "linear-gradient(135deg, #2563EB, #06B6D4)", boxShadow: "0 0 30px rgba(37,99,235,0.3)" }}
             >
               Explore Projects
             </button>
             <a
+              href="https://ziadtaha.pages.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="magnetic-btn inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-sm font-semibold"
+              style={{ background: "rgba(37,99,235,0.15)", border: "1px solid rgba(37,99,235,0.35)", color: "#93c5fd" }}
+            >
+              Engineering Dossier
+            </a>
+            <a
               href="https://wa.me/201028785511"
               target="_blank"
               rel="noopener noreferrer"
-              data-cursor-label="WhatsApp"
-              className="magnetic-btn inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-sm font-semibold"
-              style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", color: "#c0c0d0" }}
+              className="magnetic-btn inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-300"
+              style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}
             >
               WhatsApp (+20 102 878 5511)
             </a>
@@ -163,7 +132,7 @@ export default function Hero() {
             {[{ n: "2+", label: "Years Exp" }, { n: "30+", label: "Deliveries" }, { n: "124+", label: "Repositories" }].map((s) => (
               <div key={s.n} className="flex flex-col">
                 <span className="text-3xl font-black gradient-text" style={{ fontFamily: "'Space Grotesk', sans-serif", lineHeight: 1 }}>{s.n}</span>
-                <span className="text-xs font-mono mt-1" style={{ color: "#94a3b8" }}>{s.label}</span>
+                <span className="text-xs font-mono mt-1 text-slate-400">{s.label}</span>
               </div>
             ))}
           </motion.div>
@@ -193,15 +162,12 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
       >
-        <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#64748b" }}>scroll</span>
+        <span className="text-xs font-mono tracking-widest uppercase text-slate-500">scroll</span>
         <div className="w-px h-14" style={{ background: "linear-gradient(180deg, rgba(37,99,235,0.5), transparent)" }} />
-      </motion.div>
+      </div>
     </section>
   );
 }
