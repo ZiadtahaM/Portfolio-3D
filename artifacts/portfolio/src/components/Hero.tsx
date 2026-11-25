@@ -82,7 +82,7 @@ export default function Hero() {
             <div className="flex items-center gap-3">
               <div className="w-8 h-px" style={{ background: "linear-gradient(90deg, #2563EB, transparent)" }} />
               <p className="text-sm font-mono tracking-widest uppercase text-slate-300">
-                Full-Stack Software Engineer &amp; System Architect
+                Full-Stack Developer: Angular, NestJS &amp; TypeScript
               </p>
             </div>
           </motion.div>
@@ -91,7 +91,7 @@ export default function Hero() {
             variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } } }}
             className="text-base leading-relaxed max-w-md text-slate-300"
           >
-            Building scalable web applications, distributed APIs, and high-performance user interfaces. Two years of delivery across regional MENA client contracts and remote software teams. Alumnus of the Digital Egypt Pioneers Initiative (DEPI).
+            Building web applications and APIs with Angular, NestJS and TypeScript. About two years with Angular and about one with NestJS, across storefront, attendance and education projects. DEPI Angular certificate holder.
           </motion.p>
 
           <motion.div
@@ -129,7 +129,7 @@ export default function Hero() {
             variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.7, delay: 0.3 } } }}
             className="flex items-center gap-8 pt-2"
           >
-            {[{ n: "2+", label: "Years Exp" }, { n: "30+", label: "Deliveries" }, { n: "124+", label: "Repositories" }].map((s) => (
+            {[{ n: "~2y", label: "Angular" }, { n: "~1y", label: "NestJS" }, { n: "45", label: "Jest tests passing" }].map((s) => (
               <div key={s.n} className="flex flex-col">
                 <span className="text-3xl font-black gradient-text" style={{ fontFamily: "'Space Grotesk', sans-serif", lineHeight: 1 }}>{s.n}</span>
                 <span className="text-xs font-mono mt-1 text-slate-400">{s.label}</span>
