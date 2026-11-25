@@ -7,16 +7,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    id: "omniroute",
+    id: "facemark",
     num: "01",
-    title: "OmniRoute: Multi-Provider AI Gateway",
-    category: "DISTRIBUTED SYSTEMS & AI",
+    title: "FaceMark: Face-Recognition Attendance",
+    category: "BACKEND & AI",
     year: "2026",
-    link: "https://github.com/ZiadtahaM/OmniRoute",
-    image: "/assets/screenshots/omniroute.png",
-    descriptionEn: "Challenge: High-volume multi-LLM routing with token drift and latency spikes.\nArchitecture: Node.js/TypeScript gateway with token bucket rate-limiting, SQLite/Redis fallback routing, and streaming SSE responses.\nMeasured Outcome: P99 latency reduced by 35% with zero dropped queries across upstream provider outages.",
-    descriptionAr: "التحدي: توجيه استعلامات نماذج الذكاء الاصطناعي مع تقلبات زمن الاستجابة.\nالبنية: بوابة Node.js/TypeScript مع خوارزمية Token Bucket ومسارات احتياطية.\nالنتيجة: خفض زمن استجابة P99 بنسبة 35% دون أي فقدان للطلبات أثناء انقطاع المزودين.",
-    tags: ["TypeScript", "Node.js", "Redis", "SSE", "Docker"],
+    link: "https://github.com/ZiadtahaM/FaceMark",
+    image: "/assets/screenshots/facemark-modern-ops.png",
+    descriptionEn: "Challenge: Take attendance by face recognition without one fragile monolith.\nArchitecture: NestJS API with JWT auth and MySQL, calling a separate FastAPI DeepFace service behind a hand-written circuit breaker, with a WAL embedding store.\nStatus: 45 Jest tests passing locally; not yet deployed to a host.",
+    descriptionAr: "التحدي: تسجيل الحضور بالتعرف على الوجه دون نظام واحد هش.\nالبنية: واجهة NestJS مع JWT وMySQL، تستدعي خدمة DeepFace منفصلة عبر Circuit Breaker مكتوب يدوياً مع مخزن WAL للبصمات.\nالحالة: 45 اختبار Jest ناجحاً محلياً؛ لم يُنشر بعد على استضافة.",
+    tags: ["NestJS", "TypeScript", "MySQL", "DeepFace", "FastAPI"],
     gradient: "linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(6,182,212,0.08) 100%)",
     accent: "#2563EB",
     accentAlt: "#60A5FA",
@@ -30,8 +30,8 @@ const projects = [
     year: "2026",
     link: "https://edu-pro-portal.pages.dev",
     image: "/assets/screenshots/edu-pro-portal.png",
-    descriptionEn: "Challenge: Fragmented academic scheduling and gradebook tracking across institutions.\nArchitecture: Angular 18 enterprise front-end with RxJS state machines, NestJS modular backend, and PostgreSQL with Role-Based Access Control.\nMeasured Outcome: Sub-100ms dashboard render times and 100% compliance across 4 academic user roles.",
-    descriptionAr: "التحدي: تشتت الجداول الدراسية وسجلات الدرجات في المؤسسات التعليمية.\nالبنية: واجهة Angular 18 مؤسسية مع RxJS ومتحكمات خلفية NestJS وقاعدة بيانات PostgreSQL مع صلاحيات RBAC.\nالنتيجة: زمن تحميل لوحة التحكم أقل من 100 مللي ثانية وتوافق كامل لأربعة أدوار أكاديمية.",
+    descriptionEn: "Challenge: Fragmented academic scheduling and gradebook tracking across institutions.\nArchitecture: Angular 18 enterprise front-end with RxJS state machines, NestJS modular backend, and PostgreSQL with Role-Based Access Control.\nStatus: Live demo frontend on Cloudflare Pages; no performance metrics claimed.",
+    descriptionAr: "التحدي: تشتت الجداول الدراسية وسجلات الدرجات في المؤسسات التعليمية.\nالبنية: واجهة Angular 18 مؤسسية مع RxJS ومتحكمات خلفية NestJS وقاعدة بيانات PostgreSQL مع صلاحيات RBAC.\nالحالة: واجهة تجريبية منشورة على Cloudflare Pages؛ بدون ادعاء مؤشرات أداء.",
     tags: ["Angular 18", "NestJS", "PostgreSQL", "RxJS", "Tailwind"],
     gradient: "linear-gradient(135deg, rgba(6,182,212,0.12) 0%, rgba(37,99,235,0.08) 100%)",
     accent: "#06B6D4",
@@ -46,8 +46,8 @@ const projects = [
     year: "2026",
     link: "https://geenora-marketplace.pages.dev",
     image: "/assets/screenshots/geenora-marketplace.png",
-    descriptionEn: "Challenge: Severe layout thrashing and slow checkout conversions across Arabic RTL and English catalogs.\nArchitecture: Dual-locale CSS grid system, optimistic cart state management, and edge caching on Cloudflare.\nMeasured Outcome: Zero Cumulative Layout Shift (CLS: 0.00) between LTR and RTL switches; 28% checkout conversion increase.",
-    descriptionAr: "التحدي: عدم استقرار تخطيط الصفحة وتدني معدلات إتمام الشراء بين الكتالوجات العربية والإنجليزية.\nالبنية: نظام شبكة CSS ثنائي الاتجاه، إدارة سلة متفائلة، وتخزين مؤقت على شبكة Cloudflare.\nالنتيجة: انعدام تام لتحرك العناصر (CLS: 0.00) عند التبديل، وزيادة معدل التحويل بنسبة 28%.",
+    descriptionEn: "Challenge: Severe layout thrashing and slow checkout conversions across Arabic RTL and English catalogs.\nArchitecture: Dual-locale CSS grid system, optimistic cart state management, and edge caching on Cloudflare.\nStatus: Live demo frontend on Cloudflare Pages; no conversion metrics claimed.",
+    descriptionAr: "التحدي: عدم استقرار تخطيط الصفحة وتدني معدلات إتمام الشراء بين الكتالوجات العربية والإنجليزية.\nالبنية: نظام شبكة CSS ثنائي الاتجاه، إدارة سلة متفائلة، وتخزين مؤقت على شبكة Cloudflare.\nالحالة: واجهة تجريبية منشورة على Cloudflare Pages؛ بدون ادعاء مؤشرات تحويل.",
     tags: ["React", "TypeScript", "Tailwind CSS", "i18n RTL", "Cloudflare"],
     gradient: "linear-gradient(135deg, rgba(16,185,129,0.12) 0%, rgba(6,182,212,0.08) 100%)",
     accent: "#10B981",
@@ -62,8 +62,8 @@ const projects = [
     year: "2026",
     link: "https://asshifa-ehr-system.pages.dev",
     image: "/assets/screenshots/asshifa-ehr-system.png",
-    descriptionEn: "Challenge: Slow multi-tenant medical record retrieval and patient privacy compliance.\nArchitecture: HIPAA/PDPL-compliant multi-tenant schema with PostgreSQL Row-Level Security and indexed JSONB medical histories.\nMeasured Outcome: 120ms average patient lookup down from 1.4s; zero unauthorized data access across clinical tenants.",
-    descriptionAr: "التحدي: بطء استرجاع السجلات الطبية متعددة المستأجرين والتوافق مع خصوصية بيانات المرضى.\nالبنية: تصميم قاعدة بيانات متوافق مع معايير PDPL و HIPAA مع أمان مستوى الصف (RLS) وفهارس JSONB للسجلات.\nالنتيجة: خفض زمن استرجاع ملف المريض من 1.4 ثانية إلى 120 مللي ثانية مع عزل كامل للبيانات.",
+    descriptionEn: "Challenge: Slow multi-tenant medical record retrieval and patient privacy compliance.\nArchitecture: Multi-tenant PostgreSQL schema with Row-Level Security and indexed JSONB medical histories (privacy-conscious design, not a certified compliance claim).\nStatus: Live demo frontend on Cloudflare Pages; no performance metrics claimed.",
+    descriptionAr: "التحدي: بطء استرجاع السجلات الطبية متعددة المستأجرين والتوافق مع خصوصية بيانات المرضى.\nالبنية: قاعدة PostgreSQL متعددة المستأجرين مع أمان مستوى الصف (RLS) وفهارس JSONB للسجلات (تصميم يراعي الخصوصية، وليس ادعاء توافق معتمد).\nالحالة: واجهة تجريبية منشورة على Cloudflare Pages؛ بدون ادعاء مؤشرات أداء.",
     tags: ["TypeScript", "PostgreSQL", "RLS", "Next.js", "Docker"],
     gradient: "linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(16,185,129,0.08) 100%)",
     accent: "#2563EB",
@@ -78,8 +78,8 @@ const projects = [
     year: "2026",
     link: "https://flowdesk-egypt.pages.dev",
     image: "/assets/screenshots/flowdesk-egypt.png",
-    descriptionEn: "Challenge: Manual desk booking conflicts and invoice reconciliation errors in shared spaces.\nArchitecture: Centralized booking engine with real-time room calendars, automated PDF receipt generation, and Payoneer/Egyptian bank clearing.\nMeasured Outcome: 100% elimination of double-bookings; handled 800+ monthly desk reservations with zero human intervention.",
-    descriptionAr: "التحدي: تعارض حجوزات المكاتب اليدوية وأخطاء تسوية الفواتير في مساحات العمل المشتركة.\nالبنية: محرك حجوزات مركزي مع تقويم فوري وتوليد تلقائي لإيصالات PDF مع تسوية مصرفية.\nالنتيجة: القضاء التام على الحجوزات المزدوجة وإدارة أكثر من 800 حجز شهري دون تدخل يدوي.",
+    descriptionEn: "Challenge: Manual desk booking conflicts and invoice reconciliation errors in shared spaces.\nArchitecture: Centralized booking engine with real-time room calendars, automated PDF receipt generation, and Payoneer/Egyptian bank clearing.\nStatus: Live demo frontend on Cloudflare Pages; no usage metrics claimed.",
+    descriptionAr: "التحدي: تعارض حجوزات المكاتب اليدوية وأخطاء تسوية الفواتير في مساحات العمل المشتركة.\nالبنية: محرك حجوزات مركزي مع تقويم فوري وتوليد تلقائي لإيصالات PDF مع تسوية مصرفية.\nالحالة: واجهة تجريبية منشورة على Cloudflare Pages؛ بدون ادعاء مؤشرات استخدام.",
     tags: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind"],
     gradient: "linear-gradient(135deg, rgba(6,182,212,0.12) 0%, rgba(37,99,235,0.08) 100%)",
     accent: "#06B6D4",
@@ -94,8 +94,8 @@ const projects = [
     year: "2026",
     link: "https://solar-system-3d-zt.pages.dev",
     image: "/assets/screenshots/solar-system-3d-zt.png",
-    descriptionEn: "Challenge: Browser stuttering and GPU overhead during multi-body orbital simulations.\nArchitecture: Pure Three.js and custom GLSL vertex shaders with geometry instancing and procedural orbital trajectory calculation.\nMeasured Outcome: Rock-solid 60 FPS on mobile and low-power hardware with under 45MB GPU memory allocation.",
-    descriptionAr: "التحدي: تقطع المتصفح والضغط العالي على معالج الرسومات أثناء محاكاة المدارات الفلكية المتعددة.\nالبنية: مسار Three.js مع مظللات GLSL مخصصة وحساب مسارات مدارية إجرائية.\nالنتيجة: أداء ثابت بمعدل 60 إطاراً في الثانية على الهواتف والأجهزة المدمجة مع استهلاك أقل من 45 ميجابايت من ذاكرة GPU.",
+    descriptionEn: "Challenge: Browser stuttering and GPU overhead during multi-body orbital simulations.\nArchitecture: Pure Three.js and custom GLSL vertex shaders with geometry instancing and procedural orbital trajectory calculation.\nStatus: Live interactive demo on Cloudflare Pages; try it on your own device.",
+    descriptionAr: "التحدي: تقطع المتصفح والضغط العالي على معالج الرسومات أثناء محاكاة المدارات الفلكية المتعددة.\nالبنية: مسار Three.js مع مظللات GLSL مخصصة وحساب مسارات مدارية إجرائية.\nالحالة: عرض تفاعلي منشور على Cloudflare Pages؛ جرّبه على جهازك مباشرة.",
     tags: ["Three.js", "WebGL", "GLSL Shaders", "Physics", "Vite"],
     gradient: "linear-gradient(135deg, rgba(59,130,246,0.12) 0%, rgba(6,182,212,0.08) 100%)",
     accent: "#3B82F6",
@@ -342,14 +342,14 @@ export default function Projects() {
           >
             <div>
               <span className="text-xs font-mono tracking-widest uppercase" style={{ color: "#2563EB" }}>
-                03 / Production Projects
+                03 / Selected Projects
               </span>
               <h2
                 className="mt-3 font-bold tracking-tight"
                 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
                 data-testid="projects-heading"
               >
-                Verified <span className="gradient-text">Systems</span>
+                Project <span className="gradient-text">Case Studies</span>
               </h2>
             </div>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#94a3b8" }}>
