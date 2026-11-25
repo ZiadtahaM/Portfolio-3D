@@ -1,6 +1,18 @@
 # Portfolio-3D
 
-An interactive 3D WebGL developer portfolio and design show built with Three.js, React Three Fiber, TypeScript, and an Express API server.
+An interactive 3D WebGL developer portfolio built with Three.js, React Three Fiber, TypeScript, and an Express API server.
+
+**Live demo:** https://ziadtaha.pages.dev
+
+![Hero](docs/images/hero.jpg)
+
+![Animated preview](docs/images/preview.gif)
+
+## Status
+
+Code sample and design study. The 3D scene, animations and responsive layout are real and viewable in the live demo; project case studies in the site describe each project's verified scope (what is a deployed demo frontend vs. a local prototype) rather than performance metrics. Not a product.
+
+![Project case studies](docs/images/projects.jpg)
 
 ## Overview
 
@@ -50,7 +62,7 @@ Portfolio-3D/
 | Layer | Technologies |
 |-------|--------------|
 | 3D Graphics | Three.js, `@react-three/fiber`, `@react-three/drei` |
-| UI Framework | React 18, TypeScript, Tailwind CSS, Framer Motion |
+| UI Framework | React, TypeScript, Tailwind CSS, Framer Motion |
 | Icons & Components | Lucide React, Radix UI primitives |
 | Build Tool | Vite, esbuild |
 | Backend | Node.js, Express, Pino HTTP logger, CORS |
@@ -78,3 +90,7 @@ pnpm --filter api-server dev
 # Type check across the workspace
 pnpm check
 ```
+
+## License
+
+MIT - see [LICENSE](LICENSE).
