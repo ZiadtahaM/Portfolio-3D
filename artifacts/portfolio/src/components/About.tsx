@@ -133,11 +133,11 @@ export default function About() {
           </motion.h2>
 
           <motion.p variants={itemVariants} className="text-base leading-relaxed" style={{ color: "#cbd5e1" }} data-testid="about-bio">
-            I am Ziad Taha, a Computer Science undergraduate at the Egyptian E-Learning University (EELU) Alexandria (Class of 2026), an engineering fellow of the Digital Egypt Pioneers Initiative (DEPI), and an active software consultant across Mostaqel, Khamsat, and Nafizly.
+            I am Ziad Taha, a full-stack developer based in Alexandria, Egypt: Computer Science undergraduate at the Egyptian E-Learning University (EELU, class of 2026), holder of a DEPI Angular certificate, and a freelance developer on regional platforms.
           </motion.p>
 
           <motion.p variants={itemVariants} className="text-base leading-relaxed" style={{ color: "#94a3b8" }}>
-            I build full-stack web applications, distributed APIs, and real-time interactive interfaces engineered for speed, reliability, and architectural clarity. Over 30 commercial projects delivered with 100% completion ratings across MENA platforms.
+            I build web applications, APIs and interactive interfaces. The projects below are code samples and deployed demo frontends; each repository documents its own verified scope instead of marketing metrics.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-2 mt-2">
