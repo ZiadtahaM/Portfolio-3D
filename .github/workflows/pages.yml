@@ -21,6 +21,17 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - name: Apply content rules (no city, no certificates)
+        run: |
+          cd artifacts/portfolio
+          perl -0pi -e 's/ &bull; Alexandria, Egypt//' src/components/Footer.tsx
+          perl -0pi -e 's/\s*<span className="text-xs font-mono text-slate-400">Alexandria, Egypt<\/span>//' src/components/Hero.tsx
+          perl -0pi -e 's/ DEPI Angular certificate holder\.//' src/components/Hero.tsx
+          perl -0pi -e 's/\n  \{ label: "DEPI Engineering Fellow", color: "#10B981" \},//; s/a full-stack developer based in Alexandria, Egypt: Computer Science undergraduate at the Egyptian E-Learning University \(EELU, class of 2026\), holder of a DEPI Angular certificate, and a freelance developer/a full-stack developer and Computer Science undergraduate, working as a freelance developer/' src/components/About.tsx
+          perl -0pi -e 's/ and earned the DEPI Angular certificate//; s/ Alexandria",/",/' src/components/Experience.tsx
+          perl -0pi -e 's/DEPI-aligned cohort coaching/cohort coaching/; s/"Architecture", "DEPI", "Training"/"Architecture", "Training"/' src/components/Services.tsx
+          perl -0pi -e 's/ at EELU Alexandria, DEPI Fellow, and/ and/' index.html
+          cd ../..
       - run: pnpm --filter @workspace/portfolio run build
         env:
           BASE_PATH: /Portfolio-3D/
